@@ -91,6 +91,19 @@
       .overlay.active {
         display: block;
       }
+      @media (max-width: 768px) {
+    main {
+        grid-template-columns: auto repeat(2, 1fr);
+        margin: 0 20px 50px;
+        padding: 10px;
+    }
+    .text-container {
+        font-size: 14px;
+    }
+    .image-container {
+        padding-bottom: 50%;
+    }
+}
     </style>
   </head>
   <body>
