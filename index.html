@@ -40,21 +40,6 @@
         padding: 0px;
         white-space: nowrap;
       }
-      .image-container {
-        width: 100%;
-        padding-bottom: 100%;
-        position: relative;
-        overflow: hidden;
-      }
-      .image-container img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        cursor: pointer;
-      }
       .expanded-img-container {
         display: none;
         position: fixed;
@@ -78,422 +63,47 @@
         left: 0;
         padding: 5px;
       }
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.2);
-        z-index: 500;
-        display: none;
+      .content-section {
+        background-color: white;
+        padding: 20px;
+        margin: 20px auto;
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
       }
-      .overlay.active {
-        display: block;
+      .content-section h2 {
+        color: #333;
       }
-      @media (max-width: 768px) {
-    main {
-        grid-template-columns: auto repeat(2, 1fr);
-        margin: 0 20px 50px;
-        padding: 10px;
-    }
-    .text-container {
-        font-size: 14px;
-    }
-    .image-container {
-        padding-bottom: 50%;
-    }
-}
+      .content-section p {
+        color: #555;
+        line-height: 1.6;
+      }
     </style>
   </head>
   <body>
     <header>
       <img src="logo.png" alt="狗狗學日語Logo" />
     </header>
-    <div id="overlay" class="overlay" onclick="closeImage()"></div>
+    
     <main>
-      <diva class="text-container">あ行</diva>
-      <diva class="image-container"
-        ><img
-          id="image1"
-          src="あ可愛圖.jpg"
-          alt="あ"
-          onclick="toggleImage(this)"
-      /></diva>
-      <diva class="image-container"
-        ><img
-          id="image2"
-          src="い可愛圖.jpg"
-          alt="い"
-          onclick="toggleImage(this)"
-      /></diva>
-      <diva class="image-container"
-        ><img
-          id="image3"
-          src="う可愛圖.jpg"
-          alt="う"
-          onclick="toggleImage(this)"
-      /></diva>
-      <diva class="image-container"
-        ><img
-          id="image4"
-          src="え可愛圖.jpg"
-          alt="え"
-          onclick="toggleImage(this)"
-      /></diva>
-      <diva class="image-container"
-        ><img
-          id="image5"
-          src="お可愛圖.jpg"
-          alt="お"
-          onclick="toggleImage(this)"
-      /></diva>
-
-      <divka class="text-container">か行</divka>
-      <divka class="image-container"
-        ><img
-          id="image6"
-          src="か可愛圖.jpg"
-          alt="か"
-          onclick="toggleImage(this)"
-      /></divka>
-      <divka class="image-container"
-        ><img
-          id="image7"
-          src="き可愛圖.jpg"
-          alt="き"
-          onclick="toggleImage(this)"
-      /></divka>
-      <divka class="image-container"
-        ><img
-          id="image8"
-          src="く可愛圖.jpg"
-          alt="く"
-          onclick="toggleImage(this)"
-      /></divka>
-      <divka class="image-container"
-        ><img
-          id="image9"
-          src="け可愛圖.jpg"
-          alt="け"
-          onclick="toggleImage(this)"
-      /></divka>
-      <divka class="image-container"
-        ><img
-          id="image10"
-          src="こ可愛圖.jpg"
-          alt="こ"
-          onclick="toggleImage(this)"
-      /></divka>
-
-      <divsa class="text-container">さ行</divsa>
-      <divsa class="image-container"
-        ><img
-          id="image11"
-          src="さ可愛圖.jpg"
-          alt="さ"
-          onclick="toggleImage(this)"
-      /></divsa>
-      <divsa class="image-container"
-        ><img
-          id="image12"
-          src="し可愛圖.jpg"
-          alt="し"
-          onclick="toggleImage(this)"
-      /></divsa>
-      <divsa class="image-container"
-        ><img
-          id="image13"
-          src="す可愛圖.jpg"
-          alt="す"
-          onclick="toggleImage(this)"
-      /></divsa>
-      <divsa class="image-container"
-        ><img
-          id="image14"
-          src="せ可愛圖.jpg"
-          alt="せ"
-          onclick="toggleImage(this)"
-      /></divsa>
-      <divsa class="image-container"
-        ><img
-          id="image15"
-          src="そ可愛圖.jpg"
-          alt="そ"
-          onclick="toggleImage(this)"
-      /></divsa>
-
-      <divta class="text-container">た行</divta>
-      <divta class="image-container"
-        ><img
-          id="image16"
-          src="た可愛圖.jpg"
-          alt="た"
-          onclick="toggleImage(this)"
-      /></divta>
-      <divta class="image-container"
-        ><img
-          id="image17"
-          src="ち可愛圖.jpg"
-          alt="ち"
-          onclick="toggleImage(this)"
-      /></divta>
-      <divta class="image-container"
-        ><img
-          id="image18"
-          src="つ可愛圖.jpg"
-          alt="つ"
-          onclick="toggleImage(this)"
-      /></divta>
-      <divta class="image-container"
-        ><img
-          id="image19"
-          src="て可愛圖.jpg"
-          alt="て"
-          onclick="toggleImage(this)"
-      /></divta>
-      <divta class="image-container"
-        ><img
-          id="image20"
-          src="と可愛圖.jpg"
-          alt="と"
-          onclick="toggleImage(this)"
-      /></divta>
-
-      <divna class="text-container">な行</divna>
-      <divna class="image-container"
-        ><img
-          id="image21"
-          src="な可愛圖.jpg"
-          alt="な"
-          onclick="toggleImage(this)"
-      /></divna>
-      <divna class="image-container"
-        ><img
-          id="image22"
-          src="に可愛圖.jpg"
-          alt="に"
-          onclick="toggleImage(this)"
-      /></divna>
-      <divna class="image-container"
-        ><img
-          id="image23"
-          src="ぬ可愛圖.jpg"
-          alt="ぬ"
-          onclick="toggleImage(this)"
-      /></divna>
-      <divna class="image-container"
-        ><img
-          id="image24"
-          src="ね可愛圖.jpg"
-          alt="ね"
-          onclick="toggleImage(this)"
-      /></divna>
-      <divna class="image-container"
-        ><img
-          id="image25"
-          src="の可愛圖.jpg"
-          alt="の"
-          onclick="toggleImage(this)"
-      /></divna>
-
-      <divha class="text-container">は行</divha>
-      <divha class="image-container"
-        ><img
-          id="image26"
-          src="は可愛圖.jpg"
-          alt="は"
-          onclick="toggleImage(this)"
-      /></divha>
-      <divha class="image-container"
-        ><img
-          id="image27"
-          src="ひ可愛圖.jpg"
-          alt="ひ"
-          onclick="toggleImage(this)"
-      /></divha>
-      <divha class="image-container"
-        ><img
-          id="image28"
-          src="ふ可愛圖.jpg"
-          alt="ふ"
-          onclick="toggleImage(this)"
-      /></divha>
-      <divha class="image-container"
-        ><img
-          id="image29"
-          src="へ可愛圖.jpg"
-          alt="へ"
-          onclick="toggleImage(this)"
-      /></divha>
-      <divha class="image-container"
-        ><img
-          id="image30"
-          src="ほ可愛圖.jpg"
-          alt="ほ"
-          onclick="toggleImage(this)"
-      /></divha>
-
-      <divma class="text-container">ま行</divma>
-      <divma class="image-container"
-        ><img
-          id="image31"
-          src="ま可愛圖.jpg"
-          alt="ま"
-          onclick="toggleImage(this)"
-      /></divma>
-      <divma class="image-container"
-        ><img
-          id="image32"
-          src="み可愛圖.jpg"
-          alt="み"
-          onclick="toggleImage(this)"
-      /></divma>
-      <divma class="image-container"
-        ><img
-          id="image33"
-          src="む可愛圖.jpg"
-          alt="む"
-          onclick="toggleImage(this)"
-      /></divma>
-      <divma class="image-container"
-        ><img
-          id="image34"
-          src="め可愛圖.jpg"
-          alt="め"
-          onclick="toggleImage(this)"
-      /></divma>
-      <divma class="image-container"
-        ><img
-          id="image35"
-          src="も可愛圖.jpg"
-          alt="も"
-          onclick="toggleImage(this)"
-      /></divma>
-
-      <divya class="text-container">や行</divya>
-      <divya class="image-container" style="grid-column: 2/3"
-        ><img
-          id="iamge36"
-          src="や可愛圖.jpg"
-          alt="や"
-          onclick="toggleImage(this)"
-      /></divya>
-      <divya class="image-container" style="grid-column: 4/5"
-        ><img
-          id="iamge37"
-          src="ゆ可愛圖.jpg"
-          alt="ゆ"
-          onclick="toggleImage(this)"
-      /></divya>
-      <divya class="image-container" style="grid-column: 6/7"
-        ><img
-          id="iamge38"
-          src="よ可愛圖.jpg"
-          alt="よ"
-          onclick="toggleImage(this)"
-      /></divya>
-
-      <divra class="text-container">ら行</divra>
-      <divra class="image-container"
-        ><img
-          id="iamge39"
-          src="ら可愛圖.jpg"
-          alt="ら"
-          onclick="toggleImage(this)"
-      /></divra>
-      <divra class="image-container"
-        ><img
-          id="iamge40"
-          src="り可愛圖.jpg"
-          alt="り"
-          onclick="toggleImage(this)"
-      /></divra>
-      <divra class="image-container"
-        ><img
-          id="iamge41"
-          src="る可愛圖.jpg"
-          alt="る"
-          onclick="toggleImage(this)"
-      /></divra>
-      <divra class="image-container"
-        ><img
-          id="iamge42"
-          src="れ可愛圖.jpg"
-          alt="れ"
-          onclick="toggleImage(this)"
-      /></divra>
-      <divra class="image-container"
-        ><img
-          id="iamge43"
-          src="ろ可愛圖.jpg"
-          alt="ろ"
-          onclick="toggleImage(this)"
-      /></divra>
-
-      <divwa class="text-container">わ行</divwa>
-      <divwa class="image-container" style="grid-column: 2/3"
-        ><img
-          id="image44"
-          src="わ可愛圖.jpg"
-          alt="わ"
-          onclick="toggleImage(this)"
-      /></divwa>
-      <divwa class="image-container" style="grid-column: 6/7"
-        ><img
-          id="image45"
-          src="を可愛圖.jpg"
-          alt="を"
-          onclick="toggleImage(this)"
-      /></divwa>
-
-      <divn class="text-container">撥音</divn>
-      <divn class="image-container"
-        ><img
-          id="image46"
-          src="ん可愛圖.jpg"
-          alt="ん"
-          onclick="toggleImage(this)"
-      /></divn>
+      <!-- 五十音表內容 -->
     </main>
+    
+    <section class="content-section">
+      <h2>關於 Annie</h2>
+      <p>嗨，我是Annie，一名熱愛美食與生活的Blogger，專門分享各種值得推薦的餐廳與旅遊體驗。希望能夠透過我的分享，讓大家發掘更多美好滋味與驚喜！</p>
+    </section>
+    
+    <section class="content-section">
+      <h2>二訪「海貓亭拉麵」——依舊讓人驚艷的絕佳滋味！</h2>
+      <p>這次再訪「海貓亭拉麵」，依然感受到滿滿的用心與誠意。這次點了他們的<strong>招牌濃厚豚骨拉麵</strong>，湯頭濃醇順口，每一口都是滿滿的膠質與層次感，溫潤卻不死鹹，讓人忍不住想再來一碗！
+        叉燒炙燒得恰到好處，肥瘦相間，入口即化，搭配Q彈的細麵，每一口都是完美的組合。</p>
+      <p>另外，這次還加點了<strong>溏心蛋</strong>與<strong>手工餃子</strong>，蛋黃滑嫩、醬香濃郁，而餃子外皮微脆、內餡多汁，每一口都是滿滿的幸福感。</p>
+      <p>「海貓亭拉麵」不僅維持了高水準的品質，還能讓人每次造訪都感受到不同的細節與驚喜，真的不愧是讓人一試成主顧的名店。期待下次再來挑戰其他口味！</p>
+    </section>
+    
     <footer>
       <p>&copy; 2024 Learn Japanese With A Dog</p>
     </footer>
-    <div id="expandedImgContainer" class="expanded-img-container">
-      <img
-        id="expandedImg"
-        class="expanded-img"
-        src=""
-        alt="Expanded Image"
-        onclick="closeImage()"
-      />
-    </div>
-    <script>
-      function toggleImage(image) {
-        const expandedImgContainer = document.getElementById(
-          "expandedImgContainer"
-        );
-        const expandedImg = document.getElementById("expandedImg");
-        const overlay = document.getElementById("overlay");
-
-        if (expandedImgContainer.style.display === "block") {
-          expandedImgContainer.style.display = "none";
-          overlay.classList.remove("active");
-        } else {
-          expandedImg.src = image.src;
-          expandedImgContainer.style.display = "block";
-          overlay.classList.add("active");
-        }
-      }
-      function closeImage() {
-        const expandedImgContainer = document.getElementById(
-          "expandedImgContainer"
-        );
-        const overlay = document.getElementById("overlay");
-
-        expandedImgContainer.style.display = "none";
-        overlay.classList.remove("active");
-      }
-    </script>
   </body>
 </html>
